@@ -9,6 +9,10 @@ const MarketItem = new moongose.Schema({
     type: String,
     required: true,
   },
+  tag: {
+    type: String,
+    required: true,
+  },
   image_url: {
     type: String,
     required: true,
@@ -16,7 +20,7 @@ const MarketItem = new moongose.Schema({
   created_at: {
     type: Date,
     default: Date.now,
-  }  
+  },    
 })
 
 export default moongose.model('MarketItem', MarketItem)
