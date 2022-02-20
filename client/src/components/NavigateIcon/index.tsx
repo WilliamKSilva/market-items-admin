@@ -8,8 +8,8 @@ type LinkWrapperProps = {
 
 export function NavigateIcon({children, href, name}: LinkWrapperProps) {
   return (
-    <LinkWrapper>
-      <Link href={href}>{children}</Link>
+    <LinkWrapper href={href}>
+      <Link>{children}</Link>
       <LinkName>{name}</LinkName>
     </LinkWrapper>
   )

@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const LinkWrapper = styled.div`
+export const LinkWrapper = styled.a`
   display: flex;  
   align-items: center;
   justify-content: center;
   flex-direction: column;   
 `;
 
-export const Link = styled.a`
+export const Link = styled.p`
   width: 50px;
   display: flex;
   padding: 1.2rem;
