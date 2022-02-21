@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Categories from './pages/Categories'
 import Home from './pages/Home'
 import { GlobalStyles } from './styles/global'
 
@@ -8,7 +9,7 @@ function App() {
 
   return (    
     <>
-      <Home />
+      <Categories />
       <GlobalStyles />
     </>
   )

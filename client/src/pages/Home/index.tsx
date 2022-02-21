@@ -10,7 +10,11 @@ export default function Home() {
         <Heading>
           <h1>Home</h1>
         </Heading>
-        <CardSale />
+        <CardSale 
+          title="Bose Home speaker" 
+          price="USD 279"
+          image="https://assets.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/speakers/bose_home_speaker_500/product_silo_images/bose_home_speaker_500_triple_black_vpa_alexa_EC_hero.psd/jcr:content/renditions/cq5dam.web.320.320.png"  
+        />
         <WrapperNavigateIcon>
           <NavigateIcon href="/" name="Categories">
             <MenuIcon />
