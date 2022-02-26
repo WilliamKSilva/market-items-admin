@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 import { ArrowBack } from '@styled-icons/boxicons-regular'
 
 export const Container = styled.div`
@@ -7,7 +7,6 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: var(--background);
-  align-items: center;  
 `;
 
 export const Content = styled.div`
@@ -15,7 +14,7 @@ export const Content = styled.div`
   flex-direction: column;    
   width: 100%;
   height: 90%;
-  padding: 10px;
+  padding: 20px;
 `;
 
 export const Heading = styled.header`
@@ -29,6 +28,16 @@ export const Heading = styled.header`
     font-size: 2.5rem;
     color: var(--title);
   }
+`;
+
+export const WrapperCategoriesCards = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: var(--small);
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 export const ArrowIcon = styled(ArrowBack)`

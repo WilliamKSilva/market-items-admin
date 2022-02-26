@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
     --text: #1F53E4;
     --black: #000000;
     --white: #ffffff;
+    --input: #E5E4E2;
         
     --container: 100rem;
     --small: 1.5rem;
