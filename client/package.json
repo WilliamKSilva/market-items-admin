@@ -12,6 +12,7 @@
   "dependencies": {
     "@styled-icons/boxicons-regular": "^10.38.0",
     "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react-hooks": "^7.0.2",
     "@types/styled-components": "^5.1.23",
     "axios": "^0.26.0",
     "react": "^17.0.2",

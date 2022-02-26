@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '../../components/Button';
 import { CardProduct } from '../../components/CardProduct';
-import { Input } from '../../components/Input';
 import { InputForm } from '../../components/InputForm';
 import { Container, Content, Heading, WrapperProduct, WrapperInputs, WrapperButton } from './styles';
 
