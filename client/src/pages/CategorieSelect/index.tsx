@@ -13,10 +13,10 @@ export function CategorieSelect() {
           <h1>Categories</h1>          
         </Heading>
         <WrapperCategoriesCards>
-          <CardCategories name="Smarthphones" route="/categories/smarthphones"/>
-          <CardCategories name="Games" route="/categories/games"/>
-          <CardCategories name="Laptops" route="/categories/laptops"/>
-          <CardCategories name="Speakers" route="/categories/speakers"/>
+          <CardCategories name="Smarthphones" route="/categories/smarthphone"/>
+          <CardCategories name="Games" route="/categories/game"/>
+          <CardCategories name="Laptops" route="/categories/laptop"/>
+          <CardCategories name="Speakers" route="/categories/speaker"/>
         </WrapperCategoriesCards>                
       </Content>
     </Container>

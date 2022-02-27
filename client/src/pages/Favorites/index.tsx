@@ -1,23 +1,21 @@
 import { useNavigate, useParams } from 'react-router'
-import { ProductListItem } from './ProductListItem'
+import { ProductListItem } from '../Categorie/ProductListItem';
 import { ArrowIcon, Container, Content, Heading, WrapperCategoriesCards } from './styles'
-import { useCategorie } from './useCategorie';
+import { useFavorites } from './useFavorites';
 
-export function Categorie() {
+export function Favorites() {
   const navigate = useNavigate();
-  const { name } = useParams();
-  const pageCategorie = name;
-  const { categorieData } = useCategorie();           
+  const { favoritesData } = useFavorites();          
 
   return (
     <Container>
       <Content>
         <Heading>
           <ArrowIcon onClick={() => navigate('/categories')}/>
-          <h1>{pageCategorie}</h1>
+          <h1>Favorites</h1>
         </Heading>
         <WrapperCategoriesCards>
-          {categorieData.map((product) => (
+          {favoritesData.map((product) => (
             <ProductListItem
               _id={product._id}
               key={product._id} 
@@ -27,7 +25,6 @@ export function Categorie() {
               isFavorite={product.status}              
             />
           ))}
-                    
         </WrapperCategoriesCards>        
       </Content>
     </Container>

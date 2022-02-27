@@ -4,9 +4,10 @@ import { Container } from './styles';
 
 type InputProps = InputHTMLAttributes<HTMLInputElement>
 
-export function Input({...rest}: InputProps) {  
+export function Input({...rest}: InputProps) { 
+  const { register } = useForm(); 
 
   return (
-    <Container {...rest}/>
+    <Container {...register("productName")} {...rest}/>
   )
 }

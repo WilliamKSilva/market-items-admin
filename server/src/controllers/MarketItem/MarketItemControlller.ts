@@ -8,12 +8,12 @@ class MarketItemController {
     const {      
       name,
       description,
-      tag,
-      isFavorite,
+      price,
+      tag,      
       image_url
     } = request.body    
-
-    if (!name || !description || !tag || isFavorite || !image_url) {
+    
+    if (!name || !description || !tag || !price || !image_url) {
       return response.status(400).json({message: 'Empty fields are not valid!'})
     }
 
@@ -23,7 +23,7 @@ class MarketItemController {
       return response.status(400).json({message: 'This item already exists!'})
     }
 
-    const marketItem = await MarketItem.create({name, description, tag, isFavorite, image_url})
+    const marketItem = await MarketItem.create({name, description, tag, price, image_url})
 
     await MarketItem.findByIdAndUpdate(marketItemAlreadyExist, { $push: { marketItem } })
 
@@ -48,6 +48,16 @@ class MarketItemController {
     return response.status(200).json(findByTag)
     
   }
+  
+  async findByFavorite(request: Request, response: Response): Promise<Response> {        
+    const findByStatus = await MarketItem.find({ status: true})
+    
+    if (!findByStatus) {
+      return response.status(400).json([])
+    }
+
+    return response.status(200).json(findByStatus)
+  }
 
   async updateToFavorite(request: Request, response: Response): Promise<Response> {
     const updates = request.body;
@@ -56,7 +66,7 @@ class MarketItemController {
     await MarketItem.findByIdAndUpdate(_id, updates)
 
     return response.status(200).json(updates)        
-  }
+  } 
 
   async delete(request: Request, response: Response): Promise<Response> {
     const _id = request.params.id

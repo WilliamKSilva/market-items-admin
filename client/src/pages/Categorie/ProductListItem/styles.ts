@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import { Heart } from '@styled-icons/boxicons-solid'
+
+type HeartIconProps = {
+  status: boolean
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;  
@@ -62,11 +67,12 @@ export const Container = styled.div`
   }
 `;
 
-export const HeartIcon = styled(Heart)`
+export const HeartIcon = styled(Heart)<HeartIconProps>`
   width: 20px;
-  color: #A9A9A9;
-  cursor: pointer;
-  
+  color: ${({ status }) => 
+    status ?  '#DC143C' : '#A0A0A0'  
+  };
+  cursor: pointer;  
   @media (min-width: 1080px) {    
     width: 25px;      
   }

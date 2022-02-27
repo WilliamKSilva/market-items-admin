@@ -13,9 +13,7 @@ import {
   WrapperNavigateIcon 
 } from './styles';
 
-export function Home() {
-  const navigate = useNavigate();
-
+export function Home() {  
   return (
     <Container>           
       <Content>        
@@ -31,7 +29,7 @@ export function Home() {
           <NavigateIcon href="/categories" name="Categories">
             <MenuIcon />
           </NavigateIcon>
-          <NavigateIcon href="/" name="Favorites">
+          <NavigateIcon href="/favorites" name="Favorites">
             <HeartIcon />
           </NavigateIcon>          
           <NavigateIcon href="/create-product" name="Add product">

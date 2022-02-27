@@ -3,6 +3,6 @@ import { marketItemRouter } from './router/marketItemRouter'
 
 const router = Router();
 
-router.use('/marketItems', marketItemRouter)
+router.use('/market-items', marketItemRouter)
 
 export { router }
