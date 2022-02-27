@@ -31,6 +31,5 @@ cd market-items-admin => cd server
 yarn
 service mongod start
 yarn dev
-
 Running in localhost:3000
 ```
