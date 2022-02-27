@@ -1,16 +1,26 @@
 import { useState } from 'react'
-import { Categorie } from './pages/Categorie'
-import CategorieSelect from './pages/CategorieSelect'
-import CreateProduct from './pages/CreateProduct'
-import Home from './pages/Home'
+import { Header } from './components/Header'
+import { useWindowSize } from './hooks/useWindowSize'
+import { BrowserRouter as Router } from 'react-router-dom'
+import MainRoutes from './routes'
 import { GlobalStyles } from './styles/global'
 
+interface Size {
+  width: number | undefined;
+  height: number | undefined;
+}
 
-function App() {     
+
+function App() {
+  const size: Size = useWindowSize();
+  
   return (    
-    <>      
-      <Home />
-      <GlobalStyles />
+    <>
+      <Router>
+        {size.width! >= 1080 ? <Header /> : null}      
+        <MainRoutes />
+        <GlobalStyles />
+      </Router>      
     </>
   )
 }

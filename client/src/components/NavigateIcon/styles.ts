@@ -13,12 +13,16 @@ export const Link = styled.p`
   padding: 1.2rem;
   justify-content: center;
   background-color: var(--background-contrast);
-  border-radius: 45px;
+  border-radius: 45px;  
 `;
 
 export const LinkName = styled.p`
   font-size: 1.2rem;
   color: var(--text);
+
+  @media (min-width: 1080px) {
+    font-size: 1.8rem;
+  }
 `;
 
 

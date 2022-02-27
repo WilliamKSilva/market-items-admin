@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router';
 import { Button } from '../../components/Button';
 import { CardProduct } from '../../components/CardProduct';
 import { InputForm } from '../../components/InputForm';
-import { Container, Content, Heading, WrapperProduct, WrapperInputs, WrapperButton } from './styles';
+import { Container, Content, Heading, WrapperProduct, WrapperInputs, WrapperButton, ArrowIcon } from './styles';
 
-export default function CreateProduct() {
-  const { control, watch, setValue } = useForm();  
+export function CreateProduct() {
+  const { control, watch, setValue } = useForm();
+  const navigate = useNavigate();  
   
   const inputValues = watch(["productName", "productPrice", "productImageURL"])
 
@@ -19,6 +21,7 @@ export default function CreateProduct() {
     <Container>
       <Content>
         <Heading>
+          <ArrowIcon onClick={() => navigate('/')}/>
           <h1>Create Product</h1>
         </Heading>
         <WrapperProduct>

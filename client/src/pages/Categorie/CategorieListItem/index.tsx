@@ -1,4 +1,5 @@
-import { Container } from './styles'
+import { Container, HeartIcon } from './styles'
+
 
 type CategorieListItemProps = {
   image_url: string;
@@ -9,6 +10,9 @@ type CategorieListItemProps = {
 export function CategorieListItem({image_url, title, price}: CategorieListItemProps) {
   return (
     <Container>
+      <div>
+        <HeartIcon />
+      </div>
       <img src={image_url} alt="A tech product image"/>
       <section>
         <h1>{title}</h1>

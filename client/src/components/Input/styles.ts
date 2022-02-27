@@ -13,4 +13,8 @@ export const Container = styled.input`
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: var(--title);
   }
+  
+  @media (min-width: 1080px) {
+    background-color: var(--white);    
+  }
 `;

@@ -1,14 +1,21 @@
+import { useNavigate } from "react-router";
 import { CardCategories } from "../../components/CardCategories";
-import { ArrowIcon, Container, Content, Heading } from "./styles";
+import { ArrowIcon, Container, Content, Heading, WrapperCategoriesCards } from "./styles";
 
-export default function CategorieSelect() {
+export function CategorieSelect() {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <Content>
         <Heading>
-          <ArrowIcon />
+          <ArrowIcon onClick={() => navigate('/')} />
           <h1>Categories</h1>          
-        </Heading>                
+        </Heading>
+        <WrapperCategoriesCards>
+          <CardCategories name="Smarthphones" route="/categories/smarthphones"/>
+          <CardCategories name="Games" route="/categories/games"/>
+        </WrapperCategoriesCards>                
       </Content>
     </Container>
   )

@@ -1,17 +1,24 @@
 import { Container } from './styles';
 
-export function SalesListItem() {
+type SalesListItemProps = {
+  discount: string;
+  image_url: string;
+  alt: string;
+  name: string;
+}
+
+export function SalesListItem({discount, image_url, alt, name}: SalesListItemProps) {
   return (
     <Container>
       <span>
-        <p>-50%</p>
+        <p>-{discount}</p>
       </span>
       <div>
         <img 
-          src="https://files.tecnoblog.net/wp-content/uploads/2021/01/galaxy-s21-produto.png" 
-          alt="Blue smarthphone Galaxy A12"
+          src={image_url} 
+          alt={alt}
         />
-        <strong>SmartPhones</strong>
+        <strong>{name}</strong>
       </div>
     </Container>
   )
