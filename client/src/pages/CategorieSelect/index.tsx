@@ -15,6 +15,8 @@ export function CategorieSelect() {
         <WrapperCategoriesCards>
           <CardCategories name="Smarthphones" route="/categories/smarthphones"/>
           <CardCategories name="Games" route="/categories/games"/>
+          <CardCategories name="Laptops" route="/categories/laptops"/>
+          <CardCategories name="Speakers" route="/categories/speakers"/>
         </WrapperCategoriesCards>                
       </Content>
     </Container>

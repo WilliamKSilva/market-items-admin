@@ -16,7 +16,8 @@ export const Content = styled.div`
   flex-direction: column;    
   width: 100%;
   height: 90%;
-  padding: 20px;  
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
 
   @media (min-width: 1080px) {
     width: 50%;        

@@ -13,6 +13,10 @@ const MarketItem = new moongose.Schema({
     type: String,
     required: true,
   },
+  isFavorite: {
+    type: Boolean,
+    required: false,
+  },
   image_url: {
     type: String,
     required: true,
