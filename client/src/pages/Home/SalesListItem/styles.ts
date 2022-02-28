@@ -25,7 +25,7 @@ export const Container = styled.div`
     background-color: var(--background-contrast);
 
     p {
-      font-size: 9px;
+      font-size: 12px;
       color: var(--text);
     }
 

@@ -3,7 +3,7 @@ import { CardCategories } from '.'
 
 describe('<CardCategories />', () => {
   it('render component with categorie text', () => {     
-    render(<CardCategories name="test" />)
+    render(<CardCategories name="test" route="/"/>)
             
     const component = screen.getByText(/test/i)   
 

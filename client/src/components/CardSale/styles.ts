@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
+  align-self: center;
   justify-content: space-between;
   flex-direction: row;
   padding: 2rem;
   background-color: var(--highlight);
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
   @media (min-width: 1080px) {
-    width: 35%;
-    align-self: center;
+    width: 35%;    
   }
 `;
 
@@ -26,7 +27,7 @@ export const ItemInfo = styled.section`
   }
 
   p {
-    font-size: 10px;
+    font-size: 14px;
     color: var(--white);
   }
 

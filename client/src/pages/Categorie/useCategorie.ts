@@ -4,8 +4,11 @@ import { Categories } from '../../interfaces/categorie';
 import { useParams } from 'react-router';
 
 export function useCategorie() {  
-  const [ categorieData, setCategorieData ] = useState([] as Categories[]) 
-  const { name } = useParams();  
+  const { name } = useParams();
+  
+  const [ categorieData, setCategorieData ] = useState([] as Categories[]);
+  const [ openModal, setOpenModal ] = useState(false); 
+  const [modalMessage, setModalMessage] = useState('');    
   
   useEffect(() => {
     (async function getCategoriesByTag() {
@@ -15,12 +18,16 @@ export function useCategorie() {
         setCategorieData(data);
         console.log(categorieData)        
       } catch(error) {
-        console.log(error)
+        setOpenModal(true)
+        setModalMessage('Error trying to search for this category!')
       }
     })()
   }, [name])
 
   return {
-    categorieData,        
+    categorieData,
+    openModal,
+    setOpenModal,
+    modalMessage        
   }
 }

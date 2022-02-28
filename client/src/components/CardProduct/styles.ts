@@ -9,6 +9,7 @@ export const Container = styled.div`
   background-color: var(--white);
   border-radius: 4px;
   padding: var(--medium);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
   @media (min-width: 1080px) {
     background-color: var(--background-contrast);

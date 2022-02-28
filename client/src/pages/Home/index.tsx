@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { CardSale } from '../../components/CardSale';
+import { Modal } from '../../components/Modal';
 import { NavigateIcon } from '../../components/NavigateIcon';
 import { SalesListItem } from './SalesListItem';
 import { 
@@ -13,9 +15,9 @@ import {
   WrapperNavigateIcon 
 } from './styles';
 
-export function Home() {  
+export function Home() {     
   return (
-    <Container>           
+    <Container>                
       <Content>        
         <Heading>
           <h1>Home</h1>
@@ -36,7 +38,7 @@ export function Home() {
             <AddIcon />
           </NavigateIcon>          
         </WrapperNavigateIcon>
-        <ContainerSales>
+        <ContainerSales>          
           <h2>Sales</h2>
           <section>
             <SalesListItem 

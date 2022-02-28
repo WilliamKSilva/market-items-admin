@@ -4,6 +4,8 @@ import { Categories } from '../../interfaces/categorie';
 
 export function useFavorites() {
   const [ favoritesData, setFavoritesData ] = useState([] as Categories[])
+  const [ openModal, setOpenModal ] = useState(false); 
+  const [modalMessage, setModalMessage] = useState('');
 
   useEffect(() => {
     (async function getFavoriteProducts() {
@@ -12,12 +14,16 @@ export function useFavorites() {
 
         setFavoritesData(data);
       } catch(error) {
-        console.log(error)
+        setModalMessage('Error trying to search your favorite products!')
+        setOpenModal(true)
       }
     })()
   })
 
   return {
-    favoritesData
+    favoritesData,
+    openModal,
+    setOpenModal,
+    modalMessage
   }
 }

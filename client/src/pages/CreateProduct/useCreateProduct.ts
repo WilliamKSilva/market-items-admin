@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useState } from "react";
 
 type FormData = {
   productName: string;
@@ -9,6 +10,8 @@ type FormData = {
 }
 
 export function useCreateProduct() {
+  const [ openModal, setOpenModal ] = useState(false); 
+  const [modalMessage, setModalMessage] = useState('');
 
   async function onCreateProduct({productName, productPrice, productTag, productDescription, productImageURL}: FormData) {           
     try {      
@@ -26,11 +29,15 @@ export function useCreateProduct() {
       }
       )      
     } catch(error) {
-      console.log(error)
+      setOpenModal(true);
+      setModalMessage('Error trying to create a new product!')
     }    
   }
 
   return {
-    onCreateProduct
+    onCreateProduct,
+    openModal,
+    setOpenModal,
+    modalMessage    
   }
 } 

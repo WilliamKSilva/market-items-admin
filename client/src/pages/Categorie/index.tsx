@@ -1,19 +1,23 @@
-import { useNavigate, useParams } from 'react-router'
+import { useParams } from 'react-router'
+import { Link } from 'react-router-dom';
+import { Modal } from '../../components/Modal';
 import { ProductListItem } from './ProductListItem'
 import { ArrowIcon, Container, Content, Heading, WrapperCategoriesCards } from './styles'
 import { useCategorie } from './useCategorie';
 
-export function Categorie() {
-  const navigate = useNavigate();
+export function Categorie() {  
   const { name } = useParams();
   const pageCategorie = name;
-  const { categorieData } = useCategorie();           
+  const { categorieData, openModal, setOpenModal, modalMessage } = useCategorie();           
 
   return (
     <Container>
+      {openModal && <Modal setOpenModal={setOpenModal} message={modalMessage} />}
       <Content>
         <Heading>
-          <ArrowIcon onClick={() => navigate('/categories')}/>
+          <Link to="/categories">
+            <ArrowIcon />
+          </Link>
           <h1>{pageCategorie}</h1>
         </Heading>
         <WrapperCategoriesCards>

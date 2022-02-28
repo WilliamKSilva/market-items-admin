@@ -17,8 +17,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   display: flex;   
   flex-direction: column;
-  overflow: auto;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: auto;  
 
   width: 100%;
   height: 90%;
@@ -29,6 +28,7 @@ export const Content = styled.div`
     background-color: var(--white);
     border-radius: 4px;
     padding: var(--large);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 `;
 

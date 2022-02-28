@@ -14,7 +14,8 @@ export const Container = styled.div`
   background-color: var(--white);
   border-radius: 4px;
   padding: 2rem;
-  gap: 1rem;  
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;  
 
   @media (min-width: 1080px) {
     max-width: 200px;    

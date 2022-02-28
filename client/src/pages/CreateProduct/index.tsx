@@ -3,12 +3,13 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import { Button } from '../../components/Button';
 import { CardProduct } from '../../components/CardProduct';
+import { Modal } from '../../components/Modal';
 import { Container, Content, Heading, WrapperProduct, Input, WrapperInputs, WrapperButton, ArrowIcon } from './styles';
 import { useCreateProduct } from './useCreateProduct';
 
 export function CreateProduct() {
   const { watch, setValue, register, handleSubmit } = useForm();
-  const { onCreateProduct } = useCreateProduct();
+  const { onCreateProduct, openModal, setOpenModal, modalMessage } = useCreateProduct();
 
   const navigate = useNavigate();  
   
@@ -21,6 +22,7 @@ export function CreateProduct() {
     
   return (
     <Container>
+      {openModal && <Modal setOpenModal={setOpenModal} message={modalMessage}/>}
       <Content onSubmit={handleSubmit(onCreateProduct)}>
         <Heading>
           <ArrowIcon onClick={() => navigate('/')}/>

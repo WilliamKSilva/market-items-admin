@@ -16,14 +16,14 @@ export const Content = styled.div`
   flex-direction: column;        
   width: 100%;
   height: 90%;
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;  
 
   @media (min-width: 1080px) {
     width: 50%;        
     background-color: var(--white);
     border-radius: 4px;
     padding: var(--large);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 `;
 

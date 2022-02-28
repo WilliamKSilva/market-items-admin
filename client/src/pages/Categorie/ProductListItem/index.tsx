@@ -2,7 +2,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Container, HeartIcon } from './styles'
 
-
 type ProductListItemProps = {
   _id: string;
   image_url: string;
@@ -11,8 +10,8 @@ type ProductListItemProps = {
   isFavorite: boolean;
 }
 
-export function ProductListItem({_id, image_url, title, price, isFavorite}: ProductListItemProps) {
-  const [currentStatus, setCurrentStatus] = useState(isFavorite);            
+export function ProductListItem({_id, image_url, title, price, isFavorite}: ProductListItemProps) {  
+  const [currentStatus, setCurrentStatus] = useState(isFavorite);              
 
   async function handleFavoriteOption() {                                
     try {
