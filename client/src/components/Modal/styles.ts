@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Background = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 130vh;
   background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -16,22 +17,16 @@ export const Container = styled.div`
   align-items: center;
   padding: var(--medium);
   width: 300px;
-  height: 350px;
+  height: 300px;
   border-radius: 8px;
   background-color: var(--background);
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  gap: 2rem;
-
-  h1 {
-    font-size: 2.4rem;
-    color: var(--title);
-    font-weight: 700;
-    padding-top: var(--large);
-  }
+  gap: 2rem;  
 
   p {
-    font-size: 1.7rem;
-    text-align: center;
+    font-size: 2.5rem;
+    text-align: center;    
+    font-weight: 700;
     width: 250px;
     text-overflow: ellipsis;
     overflow: hidden;

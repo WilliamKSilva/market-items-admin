@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   background-color: var(--background);
   align-items: center; 
   justify-content: center;   

@@ -32,6 +32,8 @@ export const Content = styled.section`
       font-size: 2rem;
       color: var(--white);
       cursor: pointer;
+      border-bottom: 2px solid var(--white);
+      text-decoration: none;
       
       transition: transform 0.1s;
       -webkit-transition: -webkit-transform 0.35s;

@@ -7,8 +7,9 @@ type HeartIconProps = {
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;  
-  max-width: 140px;
+  flex-direction: column;    
+  width: 200px;
+  height: 240px;
   align-items: center;
   justify-content: center;
   background-color: var(--white);

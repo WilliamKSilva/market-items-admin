@@ -16,7 +16,7 @@ export function ProductListItem({_id, image_url, title, price, isFavorite}: Prod
   async function handleFavoriteOption() {                                
     try {
       setCurrentStatus(!currentStatus)                
-      const response = await axios.patch('http://localhost:3000/market-items', {
+      await axios.patch('http://localhost:3000/market-items', {
         id: _id,
         status: !currentStatus
       },
@@ -25,9 +25,7 @@ export function ProductListItem({_id, image_url, title, price, isFavorite}: Prod
           'Content-Type': 'application/json',
         }
       }
-      ) 
-
-      console.log(response.data)
+      )       
     } catch(error) {
       console.log(error)
     }

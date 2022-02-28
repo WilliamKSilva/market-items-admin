@@ -8,15 +8,14 @@ export function useCategorie() {
   
   const [ categorieData, setCategorieData ] = useState([] as Categories[]);
   const [ openModal, setOpenModal ] = useState(false); 
-  const [modalMessage, setModalMessage] = useState('');    
+  const [ modalMessage, setModalMessage ] = useState('');    
   
   useEffect(() => {
     (async function getCategoriesByTag() {
       try {
         const { data } = await axios.get(`http://localhost:3000/market-items/${name}`);
 
-        setCategorieData(data);
-        console.log(categorieData)        
+        setCategorieData(data);                
       } catch(error) {
         setOpenModal(true)
         setModalMessage('Error trying to search for this category!')

@@ -10,8 +10,7 @@ export function Modal({message, setOpenModal}: ModalProps) {
 
   return (
     <Background>
-      <Container>
-        <h1>Error!</h1>
+      <Container>        
         <p>{message}</p>
         <WrapperButton>
           <Button title="OK" onClick={() => setOpenModal(false)} />
