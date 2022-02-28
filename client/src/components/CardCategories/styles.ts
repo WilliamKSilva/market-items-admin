@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { RightArrow } from '@styled-icons/boxicons-solid/RightArrow';
 
 export const Container = styled.div`
-  width: 100%;
+  width: 100%;  
   display: flex;
   flex-direction: row;  
   justify-content: space-between;  
@@ -14,13 +14,14 @@ export const Container = styled.div`
 
   @media (min-width: 1080px) {
     background-color: var(--background-contrast);
-    width: 45%;    
+    width: 100%;    
   }
 
   p {    
     font-size: 1.8rem;    
     color: var(--title);
     font-weight: 500;
+    text-decoration: none;
   }
 `;
 

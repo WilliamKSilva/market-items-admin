@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 80%;
+  width: 50%;
+  max-width: 400px;
   display: flex;
   align-items: center;
   align-self: center;
@@ -13,7 +14,7 @@ export const Container = styled.div`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
   @media (min-width: 1080px) {
-    width: 35%;    
+    width: 55%;    
   }
 `;
 

@@ -13,7 +13,8 @@ export function useCreateProduct() {
   const [ openModal, setOpenModal ] = useState(false); 
   const [modalMessage, setModalMessage] = useState('');
 
-  async function onCreateProduct({productName, productPrice, productTag, productDescription, productImageURL}: FormData) {           
+  async function onCreateProduct({productName, productPrice, productTag, productDescription, productImageURL}: FormData) {
+    setOpenModal(true);           
     try {      
       await axios.post('http://localhost:3000/market-items', {
         name: productName,

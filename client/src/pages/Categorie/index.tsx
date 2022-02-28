@@ -1,6 +1,6 @@
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom';
-import { Modal } from '../../components/Modal';
+import { ModalNavigate } from '../../components/ModalNavigate';
 import { ProductListItem } from './ProductListItem'
 import { ArrowIcon, Container, Content, Heading, WrapperCategoriesCards } from './styles'
 import { useCategorie } from './useCategorie';
@@ -12,10 +12,10 @@ export function Categorie() {
 
   return (
     <Container>
-      {openModal && <Modal setOpenModal={setOpenModal} message={modalMessage} />}
+      {openModal && <ModalNavigate setOpenModal={setOpenModal} message={modalMessage} route="/categories"/>}
       <Content>
         <Heading>
-          <Link to="/categories">
+          <Link to="/categories" style={{textDecoration: 'none'}}>
             <ArrowIcon />
           </Link>
           <h1>{pageCategorie}</h1>

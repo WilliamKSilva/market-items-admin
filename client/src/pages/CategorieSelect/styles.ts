@@ -44,10 +44,14 @@ export const Heading = styled.header`
 export const WrapperCategoriesCards = styled.div`
   display: flex;
   padding-top: var(--large);
-  width: 100%;
-  flex-direction: row;
+  width: 70%;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: var(--large);
+
+  @media (min-width: 1080px) {
+    width: 40%;
+  }
 `;
 
 export const ArrowIcon = styled(ArrowBack)`

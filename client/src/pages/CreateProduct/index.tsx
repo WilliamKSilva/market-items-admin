@@ -35,17 +35,20 @@ export function CreateProduct() {
           <Input 
             {...register("productName")} 
             defaultValue="Name" 
-            placeholder="Name" 
+            placeholder="Name"
+            maxLength={20} 
           />
           <Input 
             {...register("productPrice")} 
             defaultValue="20" 
             placeholder="Price"
+            maxLength={10} 
           />
           <Input 
             {...register("productTag")} 
             defaultValue="Tag" 
             placeholder="Tag"
+            maxLength={20}
           />
           <Input 
             {...register("productDescription")} 

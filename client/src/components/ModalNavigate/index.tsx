@@ -1,12 +1,13 @@
-import { Button } from '../Button';
+import { ButtonNavigate } from '../ButtonNavigate';
 import { Background, Container, WrapperButton } from './styles';
 
 type ModalProps = {  
-  message: string;  
+  message: string;
+  route: string;  
   setOpenModal: React.Dispatch<React.SetStateAction<boolean>>; 
 }
 
-export function Modal({message, setOpenModal}: ModalProps) {  
+export function ModalNavigate({message, route, setOpenModal}: ModalProps) {  
 
   return (
     <Background>
@@ -14,7 +15,7 @@ export function Modal({message, setOpenModal}: ModalProps) {
         <h1>Error!</h1>
         <p>{message}</p>
         <WrapperButton>
-          <Button title="OK" onClick={() => setOpenModal(false)} />
+          <ButtonNavigate title="OK" onClick={() => setOpenModal(false)} route={route} />
         </WrapperButton>        
       </Container>
     </Background>

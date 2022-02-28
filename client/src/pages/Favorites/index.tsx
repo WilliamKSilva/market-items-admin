@@ -1,16 +1,17 @@
 import { useNavigate, useParams } from 'react-router'
 import { Modal } from '../../components/Modal';
+import { ModalNavigate } from '../../components/ModalNavigate';
 import { ProductListItem } from '../Categorie/ProductListItem';
 import { ArrowIcon, Container, Content, Heading, WrapperCategoriesCards } from './styles'
 import { useFavorites } from './useFavorites';
 
 export function Favorites() {
   const navigate = useNavigate();
-  const { favoritesData, openModal, setOpenModal, modalMessage } = useFavorites();          
+  const { favoritesData, openModal, setOpenModal, modalMessage } = useFavorites();  
 
   return (
     <Container>
-      {openModal && <Modal setOpenModal={setOpenModal} message={modalMessage}/>}
+      {openModal && <ModalNavigate setOpenModal={setOpenModal} message={modalMessage} route="/"/>}
       <Content>
         <Heading>
           <ArrowIcon onClick={() => navigate('/')}/>
