@@ -2,7 +2,7 @@
 
 ![Build Status](https://img.shields.io/github/last-commit/WilliamKSIlva/tech-store-admin)
 
-A simple tech "store" app where you can se products and list them by the tags that you are searching, 
+A simple tech "store" app where you can see products and list them by the tags that you are searching, 
 like "Smarthphones" or "Laptops", etc. You also can favorite items and create new ones.
 
 
