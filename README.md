@@ -6,7 +6,7 @@ A simple tech "store" app where you can see products and list them by the tags t
 like "Smarthphones" or "Laptops", etc. You also can favorite items and create new ones.
 
 
-You can check a video of the app working in the video below: 
+You can check a video of the app working down below: 
 
 https://user-images.githubusercontent.com/75429175/156057013-7e8bac82-3f0d-4086-ae22-39845e88f466.mp4
 
