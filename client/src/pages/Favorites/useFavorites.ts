@@ -12,13 +12,13 @@ export function useFavorites() {
       try {
         const { data } = await axios.get('http://localhost:3000/market-items/favorites')
 
-        setFavoritesData(data);
+        setFavoritesData(data);        
       } catch(error) {
         setModalMessage('Error trying to search your favorite products!')
         setOpenModal(true)
       }
     })()
-  })
+  }, [])
 
   return {
     favoritesData,

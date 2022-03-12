@@ -19,7 +19,7 @@ export function Favorites() {
         </Heading>
         <WrapperCategoriesCards>
           {favoritesData.map((product) => (
-            <ProductListItem
+            <ProductListItem              
               _id={product._id}
               key={product._id} 
               image_url={product.image_url} 
